@@ -17,15 +17,7 @@ public class Game {
 	List<Player> playersList = new ArrayList<Player>();
 
 	public Game(GameType gameType) {
-		switch (gameType) {
-		case TEST:
-			testGame();
-		}
-	}
-
-	public void testGame() {
-	
-
+		
 	}
 
 }
