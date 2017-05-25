@@ -1,7 +1,11 @@
 package goh.system;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import goh.cards.Hero;
 import goh.players.Player;
+import goh.system.games.GameType;
 import goh.system.gui.Board;
 import goh.system.gui.Hand;
 
@@ -11,10 +15,23 @@ public class Game {
 	Board theBoard = new Board();
 	String[][] board = theBoard.getTheBoard();
 
-	Player p1 = new Player();
-	Player p2 = new Player();
+	List<Player> playersList = new ArrayList<Player>();
 
-	public Game() {
+	public Game(GameType gameType) {
+		
+		switch(gameType) {
+		case TEST : testGame();
+		}
+		
+
+	}
+	
+	public void testGame() {
+		Player p1 = new Player();
+		Player p2 = new Player();
+		playersList.add(p1);
+		playersList.add(p2);
+		
 		System.out.println("Bienvenue étranger. Choisis ton héros !!");
 		System.out.println(Hero.listHeroes(Hero.getHeroesList()));
 		p1.pickHero(p1);
@@ -35,9 +52,7 @@ public class Game {
 		System.out.println("HP = " + p2.getPlayerHero().getHp());
 		
 		p1.getPlayerHero().attacks(p2.getPlayerHero());
-	
-
-
+		
 	}
 
 }

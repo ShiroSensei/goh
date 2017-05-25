@@ -1,6 +1,7 @@
 package goh.go;
 
 import goh.system.Game;
+import goh.system.games.GameType;
 
 public class Test {
 
@@ -8,9 +9,8 @@ public class Test {
 	public static void main(String[] args) {
 
 		
-		Game newGame = new Game();
+		Game testGame = new Game(GameType.TEST);
 		
-
 
 	}
 
