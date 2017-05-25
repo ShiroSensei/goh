@@ -1,4 +1,4 @@
-package goh.go;
+package goh.tests;
 
 import goh.system.Game;
 import goh.system.games.GameType;
@@ -10,6 +10,7 @@ public class Test {
 
 		
 		Game testGame = new Game(GameType.TEST);
+		
 		
 
 	}
